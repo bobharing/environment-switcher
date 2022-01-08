@@ -1,0 +1,28 @@
+{
+    "name": "NP2 - Environment Switcher",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Hey y'all",
+    "icons": {
+        "16": "icons/swap16x16.png",
+        "32": "icons/swap32x32.png",
+        "128": "icons/swap128x128.png"
+    },
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["js/content/index.js"]
+        }
+    ]
+}
