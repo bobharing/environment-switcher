@@ -1,99 +1,104 @@
-export const siteEnvironmentMapping = 
-    {
-        "ncoi-nl": {
-            "prd": "ncoi.nl",
-            "acc": "www-ncoi-nl-acc.evi.cloud",
-            "tst": "www-ncoi-nl-tst.evi.cloud",
-            "dev": "www-ncoi-nl.develop"
-        },
-        "ban-nl": {
-            "prd": "ban.nl",
-            "acc": "www-ban-nl-acc.evi.cloud",
-            "tst": "www-ban-nl-tst.evi.cloud",
-            "dev": "www-ban-nl.develop"
-        },
-        "bvo-nl": {
-            "prd": "bvo.nl",
-            "acc": "www-bvo-nl-acc.evi.cloud",
-            "tst": "www-bvo-nl-tst.evi.cloud",
-            "dev": "www-bvo-nl.develop"
-        },
-        "computrain-nl": {
-            "prd": "computrain.nl",
-            "acc": "www-computrain-nl-acc.evi.cloud",
-            "tst": "www-computrain-nl-tst.evi.cloud",
-            "dev": "www-computrain-nl.develop"
-        },
-        "mbo-nl": {
-            "prd": "www-mbo.nl",
-            "acc": "www-mbo-nl-acc.evi.cloud",
-            "tst": "www-mbo-nl-tst.evi.cloud",
-            "dev": "www-mbo-nl.develop"
-        },
-        "mvp-nl": {
-            "prd": "mvp.nl",
-            "acc": "www-mvp-nl-acc.evi.cloud",
-            "tst": "www-mvp-nl-tst.evi.cloud",
-            "dev": "www-mvp-nl.develop",
-        "ncoi-be": {
-            "prd": "ncoibe",
-            "acc": "www-ncoi-be-acc.evi.cloud",
-            "tst": "www-ncoi-be-tst.evi.cloud",
-            "dev": "www-ncoi-be.develop"
-        }
-        },"nibesvv-nl": {
-            "prd": "nibesvv.nl",
-            "acc": "www-nibesvv-nl-acc.evi.cloud",
-            "tst": "www-nibesvv-nl-tst.evi.cloud",
-            "dev": "www-nibesvv-nl.develop"
-        },
-        "proeducation-nl": {
-            "prd": "proeducation.nl",
-            "acc": "www-proeducation-nl-acc.evi.cloud",
-            "tst": "www-proeducation-nl-tst.evi.cloud",
-            "dev": "www-proeducation-nl.develop"
-        },
-        "scheidegger-nl": {
-            "prd": "scheidegger.nl",
-            "acc": "www-scheidegger-nl-acc.evi.cloud",
-            "tst": "www-scheidegger-nl-tst.evi.cloud",
-            "dev": "www-scheidegger-nl.develop"
-        },
-        "schoevers-nl": {
-            "prd": "schoevers.nl",
-            "acc": "www-schoevers-nl-acc.evi.cloud",
-            "tst": "www-schoevers-nl-tst.evi.cloud",
-            "dev": "www-schoevers-nl.develop"
-        },
-        "srm-nl": {
-            "prd": "srm.nl",
-            "acc": "www-srm-nl-acc.evi.cloud",
-            "tst": "www-srm-nl-tst.evi.cloud",
-            "dev": "www-srm-nl.develop"
-        }
-    }
-
+export const siteEnvironmentMapping = {
+  "ncoi-nl": {
+    dev: "www-ncoi-nl.develop",
+    tst: "www-ncoi-nl-tst.evi.cloud",
+    acc: "www-ncoi-nl-acc.evi.cloud",
+    prd: "ncoi.nl",
+  },
+  "ban-nl": {
+    dev: "www-ban-nl.develop",
+    tst: "www-ban-nl-tst.evi.cloud",
+    acc: "www-ban-nl-acc.evi.cloud",
+    prd: "ban.nl",
+  },
+  "bvo-nl": {
+    dev: "www-bvo-nl.develop",
+    tst: "www-bvo-nl-tst.evi.cloud",
+    acc: "www-bvo-nl-acc.evi.cloud",
+    prd: "bvo.nl",
+  },
+  "computrain-nl": {
+    dev: "www-computrain-nl.develop",
+    tst: "www-computrain-nl-tst.evi.cloud",
+    acc: "www-computrain-nl-acc.evi.cloud",
+    prd: "computrain.nl",
+  },
+  "isbw-nl": {
+    dev: "www-isbw-nl.develop",
+    tst: "www-isbw-nl-tst.evi.cloud",
+    acc: "www-isbw-nl-acc.evi.cloud",
+    prd: "isbw.nl",
+  },
+  "mbo-nl": {
+    dev: "www-mbo-nl.develop",
+    tst: "www-mbo-nl-tst.evi.cloud",
+    acc: "www-mbo-nl-acc.evi.cloud",
+    prd: "www-mbo.nl",
+  },
+  "mvp-nl": {
+    dev: "www-mvp-nl.develop",
+    tst: "www-mvp-nl-tst.evi.cloud",
+    acc: "www-mvp-nl-acc.evi.cloud",
+    prd: "mvp.nl",
+  },
+  "ncoi-be": {
+    dev: "www-ncoi-be.develop",
+    tst: "www-ncoi-be-tst.evi.cloud",
+    acc: "www-ncoi-be-acc.evi.cloud",
+    prd: "ncoibe",
+  },
+  "nibesvv-nl": {
+    dev: "www-nibesvv-nl.develop",
+    tst: "www-nibesvv-nl-tst.evi.cloud",
+    acc: "www-nibesvv-nl-acc.evi.cloud",
+    prd: "nibesvv.nl",
+  },
+  "proeducation-nl": {
+    dev: "www-proeducation-nl.develop",
+    tst: "www-proeducation-nl-tst.evi.cloud",
+    acc: "www-proeducation-nl-acc.evi.cloud",
+    prd: "proeducation.nl",
+  },
+  "scheidegger-nl": {
+    dev: "www-scheidegger-nl.develop",
+    tst: "www-scheidegger-nl-tst.evi.cloud",
+    acc: "www-scheidegger-nl-acc.evi.cloud",
+    prd: "scheidegger.nl",
+  },
+  "schoevers-nl": {
+    dev: "www-schoevers-nl.develop",
+    tst: "www-schoevers-nl-tst.evi.cloud",
+    acc: "www-schoevers-nl-acc.evi.cloud",
+    prd: "schoevers.nl",
+  },
+  "srm-nl": {
+    dev: "www-srm-nl.develop",
+    tst: "www-srm-nl-tst.evi.cloud",
+    acc: "www-srm-nl-acc.evi.cloud",
+    prd: "srm.nl",
+  },
+}
 
 export const environmentUrls = [
-    "ncoi-nl",
-    "ban-nl",
-    "bvo-nl",
-    "isbw-nl",
-    "mbo-nl",
-    "mvp-nl",
-    "ncoi-be",
-    "nibesvv-nl",
-    "opleiding-nl",
-    "proeducation-nl",
-    "scheidegger-nl",
-    "schoevers-nl",
-    "srm-nl",
-    "computrain-nl"
+  "ncoi-nl",
+  "ban-nl",
+  "bvo-nl",
+  "isbw-nl",
+  "mbo-nl",
+  "mvp-nl",
+  "ncoi-be",
+  "nibesvv-nl",
+  "opleiding-nl",
+  "proeducation-nl",
+  "scheidegger-nl",
+  "schoevers-nl",
+  "srm-nl",
+  "computrain-nl",
 ]
 
 export const environments = {
-    dev: "dev",
-    tst: "tst",
-    acc: "acc",
-    prd: "prd"
+  dev: "dev",
+  tst: "tst",
+  acc: "acc",
+  prd: "prd",
 }
