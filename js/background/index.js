@@ -22,7 +22,7 @@ chrome.tabs.onActivated.addListener(activeInfo => {
 const setEnvironmentBadge = tab => {
     let environment = getEnvironment(tab.url)
 
-    let badgeColor
+    let badgeColor = "#000"
 
     switch (environment) {
         case environments.prd:
