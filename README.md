@@ -24,10 +24,10 @@ The following sites are supported:
 * SRM
 
 ## Upcoming features
-* Full MBO support
-* Full Econnect support
 * CMS support
 * API SwaggerUIs support
+* Full MBO support
+* Full Econnect support
 
 ## Help
 If you would like to help with the project please feel free to do a clone and create a PR with your changes!
