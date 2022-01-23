@@ -1,29 +1,29 @@
 .c-body {
-  margin: 0;
+	margin: 0;
 }
 
 .c-main-container {
-  width: auto;
+	width: auto;
 }
 
 .c-environments {
-  display: flex;
+	display: flex;
 }
 
 .c-button-environment {
-  width: 75px;
-  height: 75px;
+	width: 75px;
+	height: 75px;
 }
 
 .c-button {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  border: none;
-  transition: 0.3s;
-  font-size: 2em;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	border: none;
+	transition: 0.3s;
+	font-size: 2em;
 }
 
 .c-button:hover {
-  background-color: #808080;
+	background-color: #808080;
 }

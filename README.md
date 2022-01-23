@@ -1,4 +1,5 @@
 # environment-switcher
+
 An chromium web extension to simplify switching of environments for the NP2 project. Stop typing or looking the sites up in you bookmarks. They other environment is just two clicks away!
 
 Simply install the extension and accept anything it requires. :P
