@@ -31,14 +31,15 @@ export function getPath(url) {
 
 // Returns the site in the following format (ncoi-nl)
 export function getSite(url) {
-	const environmentUrls = Object.keys(siteEnvironmentMapping);
+	const siteMappingNames = Object.keys(siteEnvironmentMapping);
 
-	let site = environmentUrls.find(siteItem => {
+	let site = siteMappingNames.find(siteItem => {
 		return url.indexOf(siteItem) !== -1;
 	});
 
+	// Support for production urls
 	if (!site) {
-		site = environmentUrls.find(domain => {
+		site = siteMappingNames.find(domain => {
 			return url.indexOf(domain.replace("-", ".")) !== -1;
 		});
 	}
