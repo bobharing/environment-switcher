@@ -20,7 +20,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
 	});
 
 	for (const env of filteredEnvArr) {
-		const button = createEnvironmentButton(siteEnvMapping[env], env);
+		const button = createEnvironmentButton(env);
 
 		const path = getPath(activeTabUrl);
 
@@ -32,7 +32,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
 	}
 });
 
-const createEnvironmentButton = (text, env) => {
+const createEnvironmentButton = env => {
 	const btnWrapper = document.createElement("div");
 	btnWrapper.classList.add("c-button-environment");
 

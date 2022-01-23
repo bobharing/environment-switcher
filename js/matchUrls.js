@@ -1,36 +1,20 @@
-import { siteEnvironmentMapping, environments } from "../data/siteEnvironmentMapping.js";
+import { siteEnvironmentMapping } from "../data/siteEnvironmentMapping.js";
 
-// TODO if possible let's refactor all of this to a "simple" regex
 // Returns either: tst, acc or prd
 export function getEnvironment(url) {
-	// Match only urls with evi.cloud in them
-	const regexpEviCloud = /.+?(?=\.evi\.cloud)/;
-	let host = url.match(regexpEviCloud);
-
-	// It might be a prd url.
-	if (!host) {
-		const environmentUrls = Object.keys(siteEnvironmentMapping);
-
-		// TODO refactor this, it's not strict enough
-		host = environmentUrls
-			.map(item => item.replace("-", "."))
-			.find(domain => {
-				return url.indexOf(domain) !== -1;
-			});
-
-		// TODO refactor this, it's not strict enough
-		// ok maybe it's develop
-		if (!host) {
-			return url.indexOf(".develop") !== -1 ? environments.dev : null;
-		}
-
-		return host ? environments.prd : null;
+	if (!url) {
+		return null;
 	}
 
-	const regexpEnvironment = /tst|acc|prd/;
-	const environment = environments[host[0].match(regexpEnvironment)[0]];
+	const matchSiteMappingName = getSite(url);
 
-	return environment;
+	const environmentMapping = siteEnvironmentMapping?.[matchSiteMappingName];
+
+	if (!environmentMapping) {
+		return null;
+	}
+
+	return Object.keys(environmentMapping).find(key => url.indexOf(environmentMapping[key]) !== -1);
 }
 
 export function isActive(url) {
