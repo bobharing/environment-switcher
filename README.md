@@ -11,26 +11,30 @@ When navigating to a website that is supported by this feature the extension wil
 Clicking on the extension reveals the environments you can navigate to, click on them to navigate to the pages. Ctrl + Click to open a new tab instead of opening in the current one.
 
 ## Support
+
 The following sites are supported:
-* BAN
-* BVO
-* COMPUTRAIN
-* ISBW
-* MVP
-* NCOI.NL & NCOI.BE
-* NIBESVV
-* PROEDUCATION
-* SCHEIDEGGER
-* SCHOEVERS
-* SRM
+
+-   BAN
+-   BVO
+-   COMPUTRAIN
+-   ISBW
+-   MVP
+-   NCOI.NL & NCOI.BE
+-   NIBESVV
+-   PROEDUCATION
+-   SCHEIDEGGER
+-   SCHOEVERS
+-   SRM
 
 ## Upcoming features
-* CMS support
-* API SwaggerUIs support
-* Full MBO support
-* Full Econnect support
+
+-   CMS support
+-   API SwaggerUIs support
+-   Full MBO support
+-   Full Econnect support
 
 ## Help
+
 If you would like to help with the project please feel free to do a clone and create a PR with your changes!
 
 If you have a suggestion please create a ticket for it.
