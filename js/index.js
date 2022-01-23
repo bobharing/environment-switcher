@@ -12,19 +12,31 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
 		return;
 	}
 
+	const currentEnvironment = getEnvironment(activeTabUrl);
+
 	// We want to work with an array of environments (set the order, exclude items, etc)
 	const environmentArr = Object.keys(siteEnvMapping);
 
 	const filteredEnvArr = environmentArr.filter(env => {
-		return env !== getEnvironment(activeTabUrl);
+		return env !== currentEnvironment;
 	});
 
+	// Keep prefixes (www- | www. | cms-v12- | api-v12-)
+	const parser = document.createElement("a");
+	parser.href = activeTabUrl;
+	let prefix = parser.host.slice(0, -siteEnvMapping[currentEnvironment].length);
+
 	for (const env of filteredEnvArr) {
+		// www. and www- need to be interchanged
+		if (env === "prd") {
+			prefix = prefix.replace("-", ".");
+		} else if (currentEnvironment === "prd") {
+			prefix = prefix.replace(".", "-");
+		}
+
 		const button = createEnvironmentButton(env);
-
 		const path = getPath(activeTabUrl);
-
-		const buttonUrl = "https://" + siteEnvMapping[env] + path;
+		const buttonUrl = `https://${prefix}${siteEnvMapping[env]}${path}`;
 
 		setButtonEvent(button, buttonUrl, tabs[0].id);
 
