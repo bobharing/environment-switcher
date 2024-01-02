@@ -1,8 +1,8 @@
 {
-	"name": "NP2 - Environment Switcher",
-	"version": "0.1.1",
+	"name": "SE - Environment Switcher",
+	"version": "1.0.0",
 	"manifest_version": 3,
-	"description": "Quickly switch between environments for NP2",
+	"description": "Quickly switch between environments for SE",
 	"icons": {
 		"16": "icons/swap16x16.png",
 		"32": "icons/swap32x32.png",
