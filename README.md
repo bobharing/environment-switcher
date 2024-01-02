@@ -1,6 +1,6 @@
 # environment-switcher
 
-An chromium web extension to simplify switching of environments for the NP2 project. Stop typing or looking the sites up in you bookmarks. They other environment is just two clicks away!
+An chromium web extension to simplify switching of environments for the SE (Schneider Electric) project. Stop typing or looking the sites up in you bookmarks. They other environment is just two clicks away!
 
 Simply install the extension and accept anything it requires. :P
 
@@ -14,24 +14,12 @@ Clicking on the extension reveals the environments you can navigate to, click on
 
 The following sites are supported:
 
--   BAN
--   BVO
--   COMPUTRAIN
--   ISBW
--   MVP
--   NCOI.NL & NCOI.BE
--   NIBESVV
--   PROEDUCATION
--   SCHEIDEGGER
--   SCHOEVERS
--   SRM
+-   Clipsal
+-   PDL
 
 ## Upcoming features
 
--   CMS support
--   API SwaggerUIs support
--   Full MBO support
--   Full Econnect support
+-   CMS admin url support
 
 ## Help
 

@@ -30,13 +30,13 @@ const setEnvironmentBadge = tab => {
 
 	switch (environment) {
 		case environments.prd:
-			badgeColor = "#ff0000";
+			badgeColor = "#800000";
 			break;
-		case environments.acc:
+		case environments.uat:
 			badgeColor = "#002BC6";
 			break;
-		case environments.tst:
-		case environments.dev:
+		case environments.test:
+		case environments.int:
 			badgeColor = "#00ab66";
 			break;
 		default:

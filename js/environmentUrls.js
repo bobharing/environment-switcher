@@ -1,6 +1,6 @@
 import { siteEnvironmentMapping } from "../data/siteEnvironmentMapping.js";
 
-// The expected site format is "ncoi-nl" or "mbo-nl"
+// The expected site format is "clipsal-com" or "pdl-co-nz"
 export function getEnvironmentUrls(site, subdomainToAttach = "") {
 	const siteMapping = siteEnvironmentMapping[site];
 

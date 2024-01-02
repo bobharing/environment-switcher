@@ -1,6 +1,6 @@
 import { siteEnvironmentMapping } from "../data/siteEnvironmentMapping.js";
 
-// Returns either: tst, acc or prd
+// Returns the environment key
 export function getEnvironment(url) {
 	if (!url) {
 		return null;
@@ -29,7 +29,7 @@ export function getPath(url) {
 	return parser.pathname + parser.search + parser.hash;
 }
 
-// Returns the site in the following format (ncoi-nl)
+// Returns the site in the following format (clipsal-com)
 export function getSite(url) {
 	const siteMappingNames = Object.keys(siteEnvironmentMapping);
 
@@ -40,8 +40,15 @@ export function getSite(url) {
 	// Support for production urls
 	if (!site) {
 		site = siteMappingNames.find(domain => {
-			return url.indexOf(domain.replace("-", ".")) !== -1;
+			return url.indexOf(domain.replaceAll("-", ".")) !== -1;
 		});
 	}
+
+	if (!site) {
+		site = siteMappingNames.find(domain => {
+			return url.indexOf(domain.replaceAll("-", "")) !== -1
+		})
+	}
+
 	return site;
 }

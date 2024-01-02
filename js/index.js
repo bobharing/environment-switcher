@@ -17,26 +17,20 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
 	// We want to work with an array of environments (set the order, exclude items, etc)
 	const environmentArr = Object.keys(siteEnvMapping);
 
-	const filteredEnvArr = environmentArr.filter(env => {
-		return env !== currentEnvironment;
-	});
-
-	// Keep prefixes (www- | www. | cms-v12- | api-v12-)
 	const parser = document.createElement("a");
 	parser.href = activeTabUrl;
-	let prefix = parser.host.slice(0, -siteEnvMapping[currentEnvironment].length);
 
-	for (const env of filteredEnvArr) {
-		// www. and www- need to be interchanged
-		if (env === "prd") {
-			prefix = prefix.replace("-", ".");
-		} else if (currentEnvironment === "prd") {
-			prefix = prefix.replace(".", "-");
-		}
+	for (const env of environmentArr) {
+		let isDisabled = false
+		
+		if (env === currentEnvironment)
+		{
+			isDisabled = true;
+		} 
 
-		const button = createEnvironmentButton(env);
+		const button = createEnvironmentButton(env, isDisabled);
 		const path = getPath(activeTabUrl);
-		const buttonUrl = `https://${prefix}${siteEnvMapping[env]}${path}`;
+		const buttonUrl = `https://${siteEnvMapping[env]}${path}`;
 
 		setButtonEvent(button, buttonUrl, tabs[0].id);
 
@@ -44,12 +38,13 @@ chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
 	}
 });
 
-const createEnvironmentButton = env => {
+const createEnvironmentButton = (env, isDisabled) => {
 	const btnWrapper = document.createElement("div");
 	btnWrapper.classList.add("c-button-environment");
 
 	const btn = document.createElement("button");
 	btn.classList.add("c-button");
+	btn.disabled = isDisabled;
 	btn.insertAdjacentText("beforeend", env);
 
 	btnWrapper.appendChild(btn);
@@ -59,8 +54,11 @@ const createEnvironmentButton = env => {
 
 // Setup event for environment button click + sendmessage to content script to navigate to url
 const setButtonEvent = (button, buttonurl, tabId) => {
+	console.log(`button - ${buttonurl}`)
 	button.addEventListener("click", event => {
 		event.preventDefault();
+
+		console.log(`button clicked - ${buttonurl}`)
 
 		// Handle ctrl + click
 		if (event.ctrlKey) {
