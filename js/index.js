@@ -54,11 +54,8 @@ const createEnvironmentButton = (env, isDisabled) => {
 
 // Setup event for environment button click + sendmessage to content script to navigate to url
 const setButtonEvent = (button, buttonurl, tabId) => {
-	console.log(`button - ${buttonurl}`)
 	button.addEventListener("click", event => {
 		event.preventDefault();
-
-		console.log(`button clicked - ${buttonurl}`)
 
 		// Handle ctrl + click
 		if (event.ctrlKey) {
